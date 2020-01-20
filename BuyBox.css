@@ -1,0 +1,77 @@
+.bl-background {
+    background: #cdcbcb;
+    padding: 20px;
+
+}
+
+/*
+лист покупок
+*/
+.bl-list {
+    background: white;
+    border: 2px solid gray;
+    float: left;
+    width: 50%;
+    display: inline-block;
+    padding: 1%;
+    font-family: Arial, serif;
+}
+
+/*
+лист купити
+ */
+.buy-list {
+    background: white;
+    border: 2px solid gray;
+    width: 30%;
+    float: right;
+    display: inline-block;
+    padding: 1%;
+    margin: 3px;
+    font-family: Arial, serif;
+}
+
+/*
+лист купленого
+ */
+.bought-list {
+    background: white;
+    border: 2px solid gray;
+    width: 30%;
+    float: right;
+    display: inline-block;
+    padding: 1%;
+    margin: 3px;
+    font-family: Arial, serif;
+
+}
+
+/*Кнопки*/
+.bl-label {
+    background: #1b3ccd;
+}
+
+.bl-plus {
+    background: #04a613;
+}
+
+.main {
+    background: orange;
+    width: 100%;
+    margin-left: auto;
+}
+
+.add {
+    margin-left: 10%;
+    margin-top: 2%;
+}
+
+.center {
+    background: white;
+    width: 100%;
+    /*Вирівнює елемент по центру*/
+    margin: auto;
+    /*Ширина екрану після якої з’являться
+    поля*/
+    max-width: 700px;
+}
