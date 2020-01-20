@@ -9,6 +9,5 @@ function createProduct(name, amount) {
 }
 
 function deleteProduct() {
-    p
 
 }
