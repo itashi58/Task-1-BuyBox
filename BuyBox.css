@@ -9,12 +9,12 @@
 */
 .bl-list {
     background: white;
-    border: 2px solid gray;
+    border: 1px solid gray;
     float: left;
     width: 50%;
     display: inline-block;
-    padding: 1%;
     font-family: Arial, serif;
+    padding: 10px;
 }
 
 /*
@@ -22,11 +22,10 @@
  */
 .buy-list {
     background: white;
-    border: 2px solid gray;
+    border: 1px solid gray;
     width: 30%;
     float: right;
     display: inline-block;
-    padding: 1%;
     margin: 3px;
     font-family: Arial, serif;
 }
@@ -36,7 +35,7 @@
  */
 .bought-list {
     background: white;
-    border: 2px solid gray;
+    border: 1px solid gray;
     width: 30%;
     float: right;
     display: inline-block;
@@ -48,14 +47,27 @@
 
 /*Кнопки*/
 .bl-label {
-    background: #1b3ccd;
+    height: 32px;
+    width: 60px;
+    background: #2185D0;
     font-family: Arial, serif;
     color: white;
-
+    float: right;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border: 0;
+    padding: 0;
 }
 
 .input-field {
-    weidth: 100%
+    height: 30px;
+    width: 438px;
+    float: left;
+    padding: 0;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    color: #cdcbcb;
+    border: 1px solid #cdcbcb;
 }
 
 .bl-plus {
@@ -63,9 +75,16 @@
 }
 
 .main {
-    background: white;
-    margin: auto 20% auto 20%;
+    width: 1000px;
+    height: 240px;
+    margin-left: auto;
+    margin-right: auto;
 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    padding-top: 6%;
 }
 
 .add {
