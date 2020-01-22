@@ -49,6 +49,13 @@
 /*Кнопки*/
 .bl-label {
     background: #1b3ccd;
+    font-family: Arial, serif;
+    color: white;
+
+}
+
+.input-field {
+    weidth: 100%
 }
 
 .bl-plus {
@@ -56,10 +63,9 @@
 }
 
 .main {
-    width: 100%;
-    margin-left: 20%;
-    margin-top: 30%;
-    margin-right: 20%;
+    background: white;
+    margin: auto 20% auto 20%;
+
 }
 
 .add {
