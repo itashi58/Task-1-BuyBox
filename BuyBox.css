@@ -11,10 +11,11 @@
     background: white;
     border: 1px solid gray;
     float: left;
-    width: 50%;
+    width: 60%;
+    height: 228px;
     display: inline-block;
     font-family: Arial, serif;
-    padding: 10px;
+    margin: 2.5%;
 }
 
 /*
@@ -26,8 +27,8 @@
     width: 30%;
     float: right;
     display: inline-block;
-    margin: 3px;
     font-family: Arial, serif;
+    margin: 2.5%;
 }
 
 /*
@@ -48,7 +49,7 @@
 /*Кнопки*/
 .bl-label {
     height: 32px;
-    width: 60px;
+    width: 20%;
     background: #2185D0;
     font-family: Arial, serif;
     color: white;
@@ -57,17 +58,19 @@
     border-bottom-right-radius: 3px;
     border: 0;
     padding: 0;
+    display: inline;
 }
 
 .input-field {
     height: 30px;
-    width: 438px;
+    width: 79.6%;
     float: left;
     padding: 0;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
     color: #cdcbcb;
     border: 1px solid #cdcbcb;
+    display: inline;
 }
 
 .bl-plus {
@@ -92,12 +95,112 @@
     margin-top: 2%;
 }
 
+.bottomBorder {
+    padding: 10px;
+    height: 36px;
+    border-bottom: 1px solid #cdcbcb;
+
+}
+
+.left {
+    width: 32.5%;
+    height: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+    position: relative
+}
+
 .center {
-    background: white;
-    width: 100%;
-    /*Вирівнює елемент по центру*/
+    width: 32.5%;
+    height: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+    position: relative
+}
+
+.right {
+    width: 32.5%;
+    height: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+    position: relative
+}
+
+.tomatoes {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%)
+}
+
+.minus {
+    text-align: center;
+    height: 100%;
+    width: 20%;
+    background: #DB2828;
+    font-family: Arial, serif;
+    font-size: 20px;
+    color: white;
+    border-radius: 50px;
+    border: none;
+    display: inline;
+    position: absolute;
+}
+
+.plus {
+    text-align: center;
+    height: 100%;
+    left: 39%;
+    width: 20%;
+    background: #21BA45;
+    font-family: Arial, serif;
+    font-size: 20px;
+    color: white;
+    border-radius: 50px;
+    border: none;
+    display: inline;
+    position: absolute;
+}
+
+.value {
+    position: absolute;
+    left: 23%;
+    top: 10%;
+    width: 10%;
+    height: 60%;
     margin: auto;
-    /*Ширина екрану після якої з’являться
-    поля*/
-    max-width: 700px;
+
+}
+
+.bought-button {
+    margin: auto;
+    position: absolute;
+    left: 30%;
+    height: 90%;
+    width: 40%;
+    border-radius: 10%;
+    background: linear-gradient(transparent, rgba(0, 0, 0, .05)) #F8F8F8;
+    color: rgba(0, 0, 0, .6);
+}
+
+.cross {
+    text-align: center;
+    height: 90%;
+    width: 18%;
+    left: 75%;
+    background: #DB2828;
+    font-family: Arial, serif;
+    font-size: 20px;
+    color: white;
+    border-radius: 10%;
+    border: none;
+    display: inline;
+    position: absolute;
+}
+
+.left-buyList {
+    width: 100%;
+    height: 25%;
+    border-bottom: 1px solid gray;
+    float: left;
 }
