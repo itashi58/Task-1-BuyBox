@@ -1,7 +1,9 @@
+/*
+бекграунд
+*/
 .bl-background {
     background: #cdcbcb;
     padding: 20px;
-
 }
 
 /*
@@ -32,25 +34,11 @@
     font-family: Arial, serif;
     margin: 2.5%;
     border-radius: 1.4%;
-
 }
 
 /*
-лист купленого
- */
-.bought-list {
-    background: white;
-    border: 1px solid gray;
-    width: 30%;
-    float: right;
-    display: inline-block;
-    padding: 1%;
-    margin: 3px;
-    font-family: Arial, serif;
-
-}
-
-/*Кнопки*/
+Кнопка додавання товару
+*/
 .bl-label {
     height: 32px;
     width: 20%;
@@ -65,6 +53,9 @@
     display: inline;
 }
 
+/*
+Поле введення назви нового товару
+*/
 .input-field {
     height: 30px;
     width: 79.65%;
@@ -75,10 +66,6 @@
     color: #cdcbcb;
     border: 1px solid #cdcbcb;
     display: inline;
-}
-
-.bl-plus {
-    background: #04a613;
 }
 
 .main {
@@ -94,12 +81,7 @@
     padding-top: 6%;
 }
 
-.add {
-    margin-left: 10%;
-    margin-top: 2%;
-}
-
-.bottomBorder {
+.list-line {
     padding: 10px;
     height: 36px;
     border-bottom: 1px solid #cdcbcb;
@@ -130,7 +112,7 @@
     position: relative
 }
 
-.tomatoes {
+.product-label {
     margin: 0;
     position: absolute;
     top: 50%;
@@ -173,6 +155,7 @@
     width: 10%;
     height: 60%;
     margin: auto;
+    text-align: center;
 
 }
 
@@ -202,7 +185,7 @@
     position: absolute;
 }
 
-.left-buyList {
+.left-to-buy-label {
     width: 100%;
     height: 15%;
     border-bottom: 1px solid gray;
@@ -214,7 +197,7 @@
     display: inline-block;
 }
 
-.not-bought {
+.left-to-buy-list {
     width: 93.5%;
     height: 25%;
     padding: 10px;
@@ -223,7 +206,7 @@
     font-size: 13px;
 }
 
-.products-not-bought {
+.left-to-buy-product {
     display: inline-block;
     background: #cdcbcb;
     padding: 6px;
@@ -231,19 +214,15 @@
 
 }
 
-.tomat {
-    display: inline-block;
-}
-
-.number {
+.left-to-buy-product-number {
     display: inline-block;
     background: orange;
     width: 16px;
     text-align: center;
-    border-radius: 9px;
+    border-radius: 8px;
 }
 
-.bought {
+.bought-label {
     width: 100%;
     height: 15%;
     border-bottom: 1px solid gray;
