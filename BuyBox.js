@@ -1,13 +1,4 @@
-let products = [];
-
-
-function createProduct(name, amount) {
-    products.push({
-        name,
-        amount
-    })
-}
-
-function deleteProduct() {
-
-}
+$('.plus').click(function () {
+    var fieldID = $(this).prev().attr("id");
+    $('#' + fieldID).val("hello world");
+});

@@ -1,20 +1,27 @@
 /*
-бекграунд
+Розміри html задля позиціонування
 */
-.bl-background {
-    background: #cdcbcb;
-    padding: 20px;
+html {
+    height: 100%;
 }
 
 /*
-лист покупок
+Бекграунд
+*/
+body {
+    background: #cdcbcb;
+    padding: 20px;
+    height: 92%;
+}
+
+/*
+Лист покупок  (основний)
 */
 .bl-list {
     background: white;
     border: 1px solid gray;
     float: left;
     width: 60%;
-    height: 228px;
     display: inline-block;
     font-family: Arial, serif;
     margin: 2.5%;
@@ -22,7 +29,7 @@
 }
 
 /*
-лист купити
+Лист купити
  */
 .buy-list {
     background: white;
@@ -68,9 +75,11 @@
     display: inline;
 }
 
+/*
+Головний блок, в якому розміщені всі елементи
+*/
 .main {
     width: 1000px;
-    height: 240px;
     margin-left: auto;
     margin-right: auto;
 
@@ -81,13 +90,20 @@
     padding-top: 6%;
 }
 
+/*
+Блоки на які розподілено основний лист покупок
+(в кожному блоці зберігається товар, або стрічка для додавання товару)
+*/
 .list-line {
     padding: 10px;
     height: 36px;
     border-bottom: 1px solid #cdcbcb;
-
 }
 
+/*
+Ліва частина блоку list-line, в ній розміщено назву товару
+(застосовується лише до товарів)
+*/
 .left {
     width: 32.5%;
     height: 100%;
@@ -96,6 +112,10 @@
     position: relative
 }
 
+/*
+Центральна частина блоку list-line, в ній розміщено лічильник товарів
+(застосовується лише до товарів)
+*/
 .center {
     width: 32.5%;
     height: 100%;
@@ -104,6 +124,10 @@
     position: relative
 }
 
+/*
+Права частина блоку list-line, в ній розміщено кнопку куплено та кнопку видалення товару
+(застосовується лише до товарів)
+*/
 .right {
     width: 32.5%;
     height: 100%;
@@ -112,6 +136,9 @@
     position: relative
 }
 
+/*
+Блок в якому розміщено назву товару
+*/
 .product-label {
     margin: 0;
     position: absolute;
@@ -119,6 +146,9 @@
     transform: translate(0, -50%)
 }
 
+/*
+Знак мінус у лічильнику
+*/
 .minus {
     text-align: center;
     height: 100%;
@@ -133,6 +163,9 @@
     position: absolute;
 }
 
+/*
+Знак плюс у лічильнику
+*/
 .plus {
     text-align: center;
     height: 100%;
@@ -148,6 +181,9 @@
     position: absolute;
 }
 
+/*
+Власне блок поля введнення лічильника
+*/
 .value {
     position: absolute;
     left: 23%;
@@ -159,6 +195,9 @@
 
 }
 
+/*
+Кнопка "Куплено"
+*/
 .bought-button {
     margin: auto;
     position: absolute;
@@ -170,6 +209,9 @@
     color: rgba(0, 0, 0, .6);
 }
 
+/*
+Кнопка видалення товару (червона з хрестиком)
+*/
 .cross {
     text-align: center;
     height: 90%;
@@ -185,6 +227,9 @@
     position: absolute;
 }
 
+/*
+Блок з написом "Залишилося" у листі куппити
+*/
 .left-to-buy-label {
     width: 100%;
     height: 15%;
@@ -197,6 +242,9 @@
     display: inline-block;
 }
 
+/*
+Лист товарі що залишилося купити знаходиться під блоком left-to-buy-label
+*/
 .left-to-buy-list {
     width: 93.5%;
     height: 25%;
@@ -206,6 +254,10 @@
     font-size: 13px;
 }
 
+/*
+Блок в якому знакодиться назва товару, що потрібно купити та кількість
+Знаходятся ці блоки в left-to-buy-list
+*/
 .left-to-buy-product {
     display: inline-block;
     background: #cdcbcb;
@@ -214,6 +266,10 @@
 
 }
 
+/*
+Блок в якому знаходится кількість товару, що потрібно купити (обведена в оранжеве коло)
+Знаходяться ці блоки в left-to-buy-product
+*/
 .left-to-buy-product-number {
     display: inline-block;
     background: orange;
@@ -222,6 +278,9 @@
     border-radius: 8px;
 }
 
+/*
+Блок в якому знаходиться великий напис Куплено
+*/
 .bought-label {
     width: 100%;
     height: 15%;
@@ -233,3 +292,128 @@
     padding-top: 10px;
     display: inline-block;
 }
+
+/*
+Поле для бейджа
+*/
+.badge-field {
+    width: auto;
+    height: 29.9%;
+    padding-left: 5%;
+    padding-top: 10%;
+    position: relative;
+
+}
+
+/*
+Бейдж
+*/
+.badge {
+    background-color: darkmagenta;
+    color: white;
+    padding-top: 1%;
+    width: 100px;
+    height: 40px;
+    font-family: Arial, serif;
+    font-size: 16px;
+    text-align: center;
+    border-top-right-radius: 10%;
+    border-top-left-radius: 10%;
+    position: fixed;
+    top: 94%;
+    transition: all 1.5s ease-in-out;
+}
+
+/*
+Напис "buy list" на бейджі
+*/
+.badge.buy-list {
+    display: block;
+}
+
+/*
+Напис "created by" на бейджі
+*/
+.badge-created-by {
+    margin-top: 3%;
+    font-size: 10px;
+    position: relative;
+    opacity: 0;
+    transition: all 1.5s;
+}
+
+/*
+Напис "Danil Malyi" на бейджі
+*/
+.badge-name {
+    font-size: 14px;
+    margin-top: 5%;
+    opacity: 0;
+    transition: all 1.5s;
+}
+
+/*
+Бейдж при наведенні мишкою (3 настпупні стилі)
+Бейдж виростає в висоту та зявляються написи created by та name
+*/
+.badge:hover {
+    background-color: blue;
+    top: 88%;
+    height: 11%;
+    transition: all 1.5s ease-in-out;
+}
+
+.badge:hover .badge-created-by {
+    opacity: 1;
+    transition: all 1.5s;
+    transition-delay: 1s;
+}
+
+.badge:hover .badge-name {
+    opacity: 1;
+    transition: all 1.5s;
+    transition-delay: 1s;
+}
+
+/*
+Зміни в вигляді документа при друку
+*/
+@media print {
+    .badge {
+        border: 5px solid darkmagenta;
+        background-color: #cdcbcb;
+    }
+
+    .badge-buy-list {
+        display: none;
+    }
+
+    .badge-name {
+        opacity: 1;
+    }
+}
+
+/*
+Зміни при ширені екрану менше 500px
+*/
+@media (max-width: 500px) {
+    .main {
+        display: block;
+        float: left;
+    }
+
+    .buy-list {
+        float: left;
+    }
+
+}
+
+/*
+Зміни при висоті екрану менше 500px
+*/
+@media (max-height: 500px) {
+    .badge {
+        display: none;
+    }
+}
+
