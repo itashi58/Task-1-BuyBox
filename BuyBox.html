@@ -7,7 +7,7 @@
     <style>
         @import url(BuyBox.css);
     </style>
-    <script type="text/javascript" src="BuyBox.js"></script>
+
     <title>BuyBox</title>
 
 </head>
@@ -18,83 +18,36 @@
     <!--Main block of products-->
 
 
-    <div class="bl-list">
+    <div class="bl-list" id="bl-list">
         <!--List of products to buy (main list)-->
 
-        <div class="list-line">
-            <input type=text placeholder="Назва товару" class="input-field">
+        <div class="add-line">
+            <input type=text placeholder="Назва товару" class="input-field" id="input-field">
 
-            <button type="button" onclick="" class="bl-label">
+            <button type="button" class="bl-label">
                 Додати
             </button>
         </div>
 
-        <div class="list-line">
+        <div class="list-line" id="1">
 
             <div class="left">
 
-                <div class="product-label">
-                    Помідори
-                </div>
+                <label>
+                    <input type="text" disabled="disabled" class="product-label" value="Помідори">
+                </label>
 
             </div>
 
             <div class="center">
                 <button type="button" onclick="" class="minus"> -</button>
-                <input id="input" type="text" value="1" class="value">
+                <input id="input" type="number" value="1" class="value">
                 <button id="button" type="button" class="plus"> +</button>
             </div>
 
             <div class="right">
                 <button type="button" onclick="" class="bought-button"> Куплено</button>
                 <button type="button" onclick="" class="cross"> x</button>
-            </div>
-
-        </div>
-
-        <div class="list-line">
-
-            <div class="left">
-
-                <div class="product-label">
-                    Печиво
-                </div>
-
-            </div>
-
-            <div class="center">
-                <button type="button" onclick="" class="minus"> -</button>
-                <input type="text" value="1" class="value">
-                <button type="button" onclick="" class="plus"> +</button>
-            </div>
-
-            <div class="right">
-                <button type="button" onclick="" class="bought-button"> Куплено</button>
-                <button type="button" onclick="" class="cross"> x</button>
-            </div>
-
-        </div>
-
-        <div class="list-line">
-
-            <div class="left">
-
-                <div class="product-label">
-                    Сир
-                </div>
-
-            </div>
-
-            <div class="center">
-                <button type="button" onclick="" class="minus"> -</button>
-                <input type="text" value="1" class="value">
-                <button type="button" onclick="" class="plus"> +</button>
-            </div>
-
-            <div class="right">
-                <button type="button" onclick="" class="bought-button"> Куплено</button>
-                <button type="button" onclick="" class="cross"> x</button>
-
             </div>
 
         </div>
@@ -108,10 +61,10 @@
             &nbsp; Залишилося
         </div>
 
-        <div class="left-to-buy-list">
+        <div class="left-to-buy-list" id="left-to-buy-list">
 
-            <div class="left-to-buy-product">
-                <span>Помідори</span>
+            <div class="left-to-buy-product" id="2buy">
+                <div class="left-to-buy-product-label">Помідори</div>
                 <span class="left-to-buy-product-number">1</span>
             </div>
 
@@ -155,8 +108,8 @@
 
 </div>
 
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="BuyBox.js"></script>
 
 </body>
 </html>

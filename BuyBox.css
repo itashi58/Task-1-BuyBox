@@ -14,6 +14,25 @@ body {
     height: 92%;
 }
 
+button {
+    outline: none;
+}
+
+/*
+Головний блок, в якому розміщені всі елементи
+*/
+.main {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    padding-top: 6%
+}
+
 /*
 Лист покупок  (основний)
 */
@@ -22,10 +41,10 @@ body {
     border: 1px solid gray;
     float: left;
     width: 60%;
-    display: inline-block;
     font-family: Arial, serif;
     margin: 2.5%;
     border-radius: 1.4%;
+    height: max-content;
 }
 
 /*
@@ -70,24 +89,8 @@ body {
     padding: 0;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
-    color: #cdcbcb;
     border: 1px solid #cdcbcb;
     display: inline;
-}
-
-/*
-Головний блок, в якому розміщені всі елементи
-*/
-.main {
-    width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-
-    padding-top: 6%;
 }
 
 /*
@@ -95,6 +98,18 @@ body {
 (в кожному блоці зберігається товар, або стрічка для додавання товару)
 */
 .list-line {
+    padding: 10px;
+    height: 36px;
+    border-bottom: 1px solid #cdcbcb;
+    transition: all 3s ease-in-out;
+    display: none;
+}
+
+
+/*
+Блок в якому знаходиться додавання товарів
+*/
+.add-line {
     padding: 10px;
     height: 36px;
     border-bottom: 1px solid #cdcbcb;
@@ -143,7 +158,9 @@ body {
     margin: 0;
     position: absolute;
     top: 50%;
-    transform: translate(0, -50%)
+    transform: translate(0, -50%);
+    border: none;
+    background: white;
 }
 
 /*
@@ -157,7 +174,7 @@ body {
     font-family: Arial, serif;
     font-size: 20px;
     color: white;
-    border-radius: 50px;
+    border-radius: 50%;
     border: none;
     display: inline;
     position: absolute;
@@ -175,7 +192,7 @@ body {
     font-family: Arial, serif;
     font-size: 20px;
     color: white;
-    border-radius: 50px;
+    border-radius: 50%;
     border: none;
     display: inline;
     position: absolute;
@@ -192,7 +209,8 @@ body {
     height: 60%;
     margin: auto;
     text-align: center;
-
+    border-radius: 20%;
+    box-shadow: none;
 }
 
 /*
@@ -247,7 +265,7 @@ body {
 */
 .left-to-buy-list {
     width: 93.5%;
-    height: 25%;
+    height: auto;
     padding: 10px;
     border-bottom: 1px solid gray;
     display: inline-block;
@@ -263,7 +281,12 @@ body {
     background: #cdcbcb;
     padding: 6px;
     border-radius: 5px;
+    margin: 5px;
 
+}
+
+.left-to-buy-product-label {
+    display: inline-block;
 }
 
 /*
@@ -396,7 +419,7 @@ body {
 /*
 Зміни при ширені екрану менше 500px
 */
-@media (max-width: 500px) {
+@media (max-width: 748px) {
     .main {
         display: block;
         float: left;
@@ -417,3 +440,12 @@ body {
     }
 }
 
+/*
+Видалення стрілок зміни числа на input типу number в Chrome
+*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
