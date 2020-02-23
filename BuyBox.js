@@ -247,50 +247,95 @@
 window.onload = function () {
     let idCounter = 5;
 
-    addFirstLines("Помідори", 2);
-    addFirstLines("Печиво", 3);
-    addFirstLines("Сир", 4);
+    addFirstProducts("Помідори", 2);
+    addFirstProducts("Печиво", 3);
+    addFirstProducts("Сир", 4);
 
     $(".plus").click(
         function () {
             // $(this).parent().children("input").val(parseInt($(this).parent().children("input").val()) + 1);
             $(this).siblings("input").val(parseInt($(this).siblings("input").val()) + 1);
+            $("#" + $(this).parent().parent().attr("id") + "buy").find("span").html(parseInt($(this).siblings("input").val()));
         });
 
     $(".minus").click(
         function () {
-            if ($(this).parent().children("input").val() != 1) {
-                $(this).parent().children("input").val(parseInt($(this).parent().children("input").val()) - 1);
+            if ($(this).siblings("input").val() != 1) {
+                $(this).siblings("input").val(parseInt($(this).parent().children("input").val()) - 1);
+                $("#" + $(this).parent().parent().attr("id") + "buy").find("span").html(parseInt($(this).siblings("input").val()));
             }
         });
 
     $(".cross").click(function () {
         this.parentElement.parentElement.remove();
+        $("#" + $(this).parent().parent().attr("id") + "buy").remove();
     });
 
 
     $(".bl-label").click(
         function () {
-            let a = $("#1").clone(true);
-            let b = $("#2buy").clone(true);
-            a.css("display", "block");
-            a.find("label").find("input").val($("#input-field").val());
-            a.attr("id", idCounter);
-            idCounter++;
-            a.appendTo("#bl-list");
-            b.appendTo("#left-to-buy-list");
-            $("#input-field").val("");
+            if ($("#input-field").val() !== "") {
+                let a = $("#1").clone(true);
+                a.css("display", "block");
+                a.find("label").find("input").val($("#input-field").val());
+                a.attr("id", idCounter);
+
+                let b = $("#1buy").clone(true);
+                b.find("div").html($("#input-field").val());
+                b.css("display", "inline-block");
+                b.attr("id", idCounter + "buy");
+
+                idCounter++;
+                a.appendTo("#bl-list");
+                b.appendTo("#left-to-buy-list");
+                $("#input-field").val("");
+            }
         }
     );
 
 
-    function addFirstLines(product, id) {
+    $('input').keydown(function (e) {
+        if (e.keyCode === 13) {
+
+        }
+    });
+
+    $(".bought-button").click(function () {
+        if ($(this).html() === "Куплено") {
+            $(this).parent().parent().find("label").find("input").css("text-decoration", "line-through");
+            $(this).parent().siblings(".center").find("button").hide();
+            $(this).html("Не куплено");
+            let id = $(this).parent().parent().attr("id") + "buy";
+            let element = $("#" + id).clone(true);
+            $("#" + id).remove();
+            element.appendTo("#bought-list");
+
+
+        } else {
+            $(this).parent().parent().find("label").find("input").css("text-decoration", "none");
+            $(this).parent().siblings(".center").find("button").show();
+            $(this).html("Куплено");
+            let id = $(this).parent().parent().attr("id") + "buy";
+            let element = $("#" + id).clone(true);
+            $("#" + id).remove();
+            element.appendTo("#left-to-buy-list");
+        }
+
+
+    });
+
+
+    function addFirstProducts(product, id) {
         let a = $("#1").clone(true);
         a.css("display", "block");
         a.find("label").find("input").val(product);
         a.attr("id", id);
         a.appendTo("#bl-list");
+
+        let b = $("#1buy").clone(true);
+        b.find("div").html(product);
+        b.css("display", "inline-block");
+        b.attr("id", id + "buy");
+        b.appendTo("#left-to-buy-list");
     }
-
-
 };
