@@ -24,7 +24,7 @@
         <div class="add-line">
             <input type=text placeholder="Назва товару" class="input-field" id="input-field">
 
-            <button type="button" class="bl-label">
+            <button type="button" class="bl-label" data-tooltip="tooltip">
                 Додати
             </button>
         </div>
@@ -33,21 +33,21 @@
 
             <div class="left">
 
-                <label>
-                    <input type="text" disabled="disabled" class="product-label" value="Помідори">
+                <label class="label">
+                    <input type="text" class="product-label" value="Помідори" disabled="disabled" >
                 </label>
 
             </div>
 
             <div class="center">
-                <button type="button" class="minus"> -</button>
+                <button type="button" class="minus" data-tooltip="minus"> -</button>
                 <input id="input" type="number" value="1" class="value">
-                <button id="button" type="button" class="plus"> +</button>
+                <button id="button" type="button" class="plus" data-tooltip="plus"> +</button>
             </div>
 
             <div class="right">
-                <button type="button" class="bought-button">Куплено</button>
-                <button type="button" class="cross"> x</button>
+                <button type="button" class="bought-button" data-tooltip="buy">Куплено</button>
+                <button type="button" class="cross" data-tooltip="delete"> x</button>
             </div>
 
         </div>
@@ -64,7 +64,7 @@
         <div class="left-to-buy-list" id="left-to-buy-list">
 
             <div class="left-to-buy-product" id="1buy">
-                <div class="left-to-buy-product-label">Помідори</div>
+                <div class="left-to-buy-product-label"></div>
                 <span class="left-to-buy-product-number">1</span>
             </div>
 
@@ -88,7 +88,6 @@
 
 </div>
 
-<div class="badge-field">
     <!--Badge block-->
 
     <div class="badge">
@@ -102,8 +101,6 @@
             Danil Malyi
         </div>
 
-
-    </div>
 
 </div>
 

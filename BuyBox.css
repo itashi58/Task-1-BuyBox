@@ -14,6 +14,9 @@ body {
     height: 92%;
 }
 
+/*
+Прибираємо обводку при натисканні кнопок
+*/
 button {
     outline: none;
 }
@@ -60,7 +63,7 @@ button {
     float: right;
     display: inline-block;
     font-family: Arial, serif;
-    margin: 2.5% 1.5% 1.5%;
+    margin: 2.5%;
     border-radius: 1.4%;
 }
 
@@ -79,6 +82,7 @@ button {
     border: 0;
     padding: 0;
     display: inline;
+    position: relative;
 }
 
 /*
@@ -103,8 +107,9 @@ button {
     padding: 10px;
     height: 36px;
     border-bottom: 1px solid #cdcbcb;
-    transition: all 3s ease-in-out;
     display: none;
+    /*animation: all ease-in 3s;*/
+
 }
 
 
@@ -450,16 +455,21 @@ button {
 }
 
 /*
-Зміни при ширені екрану менше 500px
+Зміни при ширені екрану менше 900px
 */
-@media (max-width: 748px) {
+@media (max-width: 900px) {
     .main {
-        display: block;
+        display: inline-block;
         float: left;
+    }
+
+    .bl-list{
+        margin-right: 30%;
     }
 
     .buy-list {
         float: left;
+        display: block;
     }
 
 }
@@ -481,4 +491,51 @@ input::-webkit-inner-spin-button {
     /* display: none; <- Crashes Chrome on hover */
     -webkit-appearance: none;
     margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+/*
+Тултіпи
+*/
+button:before{
+    position:absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    width: 36px;
+    padding: 6px;
+    color: white;
+    text-align: center;
+    background-color: darkviolet;
+    border-radius: 5px;
+    content:attr(data-tooltip);
+    font-size: 13px;
+    transition: opacity .7s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+button:hover:before{
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.plus:before{
+    left: -10%;
+}
+
+.minus:before{
+    left: -10%;
+}
+
+.bought-button:before{
+    left: 25%;
+}
+
+.bl-label:before{
+    left: 30%;
+}
+
+.cross:before{
+    left: -20%;
 }
